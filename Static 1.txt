@@ -1,0 +1,14 @@
+using System;
+namespace Something{
+  public static class Car
+   {
+	 static void Wheels()
+	 {
+		 System.Console.WriteLine("The car has Four wheels");
+	 }
+	   public static void Main(string[] args)
+	   {
+		   Wheels();
+	   }
+   }
+}
