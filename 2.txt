@@ -1,0 +1,27 @@
+using System;
+
+public class Student {
+   public int id;
+	public int age;  
+   public String name; 
+	public static string subject="Physics";
+
+   public Student(int id, String name, int age, String subject) {
+      this.id = id;
+      this.name = name;
+      this.age = age;
+   }
+
+   public void showInfo() {
+      System.Console.WriteLine(id + " " + name+" "+age+ " "+subject);
+   }
+}
+
+   public static void Main(Studnet s) {
+        System.Console.WriteLine(s.name);
+        System.Console.WriteLine(s.id);
+        System.Console.WriteLine(s.age);
+        System.Console.WriteLine(subject);
+
+   }
+} 
