@@ -1,0 +1,41 @@
+using System;
+using System.Collections;
+
+namespace Collections {
+   class Program {
+      public static void Main(string[] args) {
+         Stack st = new Stack();
+         
+         st.Push('R');
+         st.Push('A');
+         st.Push('M');
+         st.Push('A');
+         
+         Console.WriteLine("Values in Stack: ");
+         foreach (char c in st) {
+            Console.Write(c + " ");
+         }
+         Console.WriteLine();
+         
+         st.Push('R');
+         st.Push('K');
+         Console.WriteLine("Values in Stack are", st.Peek());
+         
+         foreach (char c in st) {
+            Console.Write(c + " ");
+         }
+         
+         Console.WriteLine();
+         
+         Console.WriteLine("Removing values ");
+         st.Pop();
+         st.Pop();
+         st.Pop();
+         
+         Console.WriteLine("Values in Stack: ");
+         foreach (char c in st) {
+            Console.Write(c + " ");
+         }
+      }
+   }
+}
