@@ -1,0 +1,17 @@
+//Currently working on it..
+using System;
+namespace Program{
+	public class Hi{
+		public static void Main()
+		{
+		int[] a=new int[] {5,10,15,20,3};
+			Array.Clear(a,0,1);
+			
+		foreach(var item in a)
+		{
+			Console.WriteLine(item);
+		}
+	
+	}
+}
+}
