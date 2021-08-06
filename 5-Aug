@@ -1,0 +1,74 @@
+
+public class Student
+{
+  public int studentID;
+  pubilc string studentName;
+  public int studentRollNo;
+  public string subject;
+  }
+  public class MathStudent:student()
+  {
+    public void Method()
+    {
+      studentID;  //private class can't access anywhere, except where it was declared
+      stduentName="Jack"; //Protected calss Accessible in Child class of same assembly
+      StdentRollNo; //Internal class can be accessible child class of same assembly
+      subject="Maths";  //public can be accessible in child class of same assembly
+      }
+   }
+   
+   public class OtherClass
+   {
+    public void Method()
+    {
+      studentID;  // Not accessible
+      stduentName="Jack"; //protected class can't be accessible in other class of the same assembly
+      StdentRollNo; //Internal class can be accessible in other class of the same assembly
+      subject="Maths";  //public class can be accessible in other classes of same assembly
+      }
+   }
+   
+   
+   
+   
+   //code at another assembley.....
+   
+   public class MaleStudent:student
+   {
+      public void Method()
+      {
+        studentID;  //Not accessible
+        stduentName="Jack"; //protected class can't be accessible in child class of the other assembly
+        StdentRollNo; //Internal class can't be accessible in child class of other assembly
+        subject="Maths"; //public class can be accessible in child class of other assembly code
+      }
+   }
+   public class OtherClass
+   {  
+      public void Method()
+      {
+        studentID;  //Not Accessible
+        stduentName="Jack";  //protected class can't be accessible other class of other assembly
+        StdentRollNo; //Internal class can't be accessible other class of other assembly
+        subject="Maths";  //public class can be accessible other class of other assembly, it can be accessed in any class of of it's own assembly and as well as other in other assemblies.
+      }
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+      
+      
