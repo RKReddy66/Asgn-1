@@ -1,0 +1,77 @@
+//Constructors
+
+using System;
+using System.Text.RegularExpressions;					
+public class Employee{
+	//fields
+	private _accountID;
+	private _name;
+	private _balance;
+	//properties
+	public int AccountID
+	{
+		set{
+			_accountID=value;
+		}
+		get{
+			return _accountID;
+		}
+		
+		public string Name{
+			set{
+			_name=value;
+		}
+		get{
+			return _name;
+		}
+		public string Balance{
+			set{
+			_balance=value;
+		}
+		get{
+			return _balance;
+		}
+			public class DematAccount:SalaryAmount{
+				//fields
+				private string _panCard;
+				//properties
+				public string PanCard
+				{
+					set
+					{
+						_panCard=_value;
+					}
+					get
+					{
+						return _panCard;
+					}
+				}
+					//method
+					public static bool isValidMobileNumber(string inputMobileNumber)
+    					{
+						string strRegex=
+							
+							        Regex re = new Regex(strRegex);
+						 if (re.IsMatch(inputMobileNumber))
+            return (true);
+        else
+            return (false);
+    }
+}
+
+						
+				class Something{
+					static void Main()
+					{
+						//creating an object
+						SalaryAccount=new SalaryAccount();
+						Sal1.AccountID=12345;
+						Sal1.Name="Something";
+						Sal1.Balance=10,000;
+						System.Console.WriteLine("Employee Details");
+						System.Console.WriteLine(Sal1.AccountID);
+						System.Console.WriteLine(Sal1.Name);
+						System.Console.WriteLine(Sal1.Balance);
+						System.Console.WriteLine();
+					}
+				}
