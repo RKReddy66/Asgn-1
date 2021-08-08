@@ -1,0 +1,79 @@
+//Method Hiding
+
+
+using System;  
+  
+namespace VirtualExample  
+{     
+    class WriteNum  
+    {     
+       public int hundred;  
+       public int thousand;  
+       public int one;   
+		public int writeStr;	
+  
+       public WriteNum(int hundred, int thousand, int one)  
+       {  
+           this.hundred = hundred;  
+           this.thousand = thousand;  
+           this.one = one;  
+       }  
+  
+       public void Average()  
+       {  
+           int average;  
+           average = hundred+thousand+one;  
+           Console.WriteLine("WriteNum average value is", average);  
+       }  
+  
+       public virtual void WriteStr()  
+       {  
+           int writeStr;  
+           writeStr= thousand/hundred;  
+           Console.WriteLine("Vehicle Speed is ", writeStr);  
+       }  
+    }   
+  
+    class WriteNum2 : WriteNum 
+    {  
+        public WriteNum2(int hundred, int thousand, int one)  
+            : base(hundred, thousand, one)  
+        {  
+        }  
+      public void Average()  
+        {  
+            int average;  
+            average =  hundred+thousand+one;
+            Console.WriteLine("WriteNum2 Average is ", average);  
+        }  
+  
+        public override void WriteStr()  
+        {  
+
+		   string name;
+		   name="Rama Krishna Reddy";
+		   Console.WriteLine("Name is ",name);
+        }  
+    }   
+  
+    class Program  
+   {  
+        static void Main(string[] args)  
+        {  
+             int hundred,thousand, one;  
+             Console.WriteLine("Enter the ");  
+             hundred = int.Parse(Console.ReadLine());  
+             Console.WriteLine("Enter the ");  
+             thousand = int.Parse(Console.ReadLine());  
+             Console.WriteLine("Enter the Fuel");  
+             one = int.Parse(Console.ReadLine());  
+             WriteNum2 objWN2 = new WriteNum2(hundred,thousand,one);  
+             WriteNum objWN = objWN2;  
+             objWN2.Average();  
+             objWN.Average();  
+             objWN2.WriteStr();  
+             objWN.WriteStr();  
+            Console.Read();  
+        }         
+    }  
+}   
